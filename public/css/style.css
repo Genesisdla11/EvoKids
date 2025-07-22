@@ -1,0 +1,286 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Inter', sans-serif; /* Fuente recomendada para interfaces web */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Un color de fondo suave */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el footer se quede abajo */
+}
+
+/* Estilos para el encabezado de la página */
+header {
+    background-color: #6a0dad; /* Un color morado vibrante */
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espacio entre los elementos de la navegación */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+}
+
+/* Estilos para el contenido principal */
+main {
+    flex: 1; /* Permite que el contenido principal ocupe el espacio restante */
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Sombra más pronunciada */
+}
+
+/* Sección hero (destacada) */
+.hero {
+    text-align: center;
+    padding: 50px 30px;
+    background: linear-gradient(135deg, #a7e9af, #d0f0c0); /* Degradado de colores suaves */
+    border-radius: 10px;
+    margin-bottom: 40px;
+    color: #2e8b57;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #1a73e8; /* Un azul más vibrante */
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+/* Estilos para botones */
+.button {
+    display: inline-block;
+    background-color: #1a73e8; /* Azul primario */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px; /* Botones pill-shaped */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+    background-color: #0d47a1; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+/* Mensajes flash (éxito/error) */
+.flashes {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.flashes li {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.flashes .success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flashes .error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Sección de características */
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.features h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: #6a0dad;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    flex: 1;
+    min-width: 280px;
+    max-width: 32%; /* Para 3 columnas en escritorio */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.feature-item h4 {
+    color: #6a0dad;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Estilos específicos para el contenedor de registro */
+.register-container {
+    max-width: 550px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.register-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd6e0;
+    border-radius: 8px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+    outline: none;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 12px;
+    transform: scale(1.2); /* Aumenta el tamaño del checkbox */
+}
+
+.checkbox-group label {
+    margin-bottom: 0; /* Ajusta el margen para que esté alineado */
+    font-size: 1rem;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        max-width: 90%;
+    }
+
+    .register-container {
+        margin: 30px 15px;
+        padding: 25px;
+    }
+}

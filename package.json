@@ -1,0 +1,27 @@
+{
+  "name": "evokids",
+  "version": "1.0.0",
+  "main": "evokids.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Genesisdla11/EvoKids.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Genesisdla11/EvoKids/issues"
+  },
+  "homepage": "https://github.com/Genesisdla11/EvoKids#readme",
+  "description": "",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "sqlite3": "^5.1.7"
+  }
+}

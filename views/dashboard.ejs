@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuario - Plataforma de Terapia</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Usuario</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/dashboard">Mi Panel</a></li>
+                <li><a href="/logout">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>¡Hola, <%= username %>!</h2>
+            <% if (isParent) { %>
+                <p>Bienvenido al panel de padres. Aquí podrás revisar el progreso de tus hijos.</p>
+                <p>Tu rol: Padre/Tutor</p>
+            <% } else { %>
+                <p>¡Bienvenido al panel de juegos! Prepárate para divertirte y aprender.</p>
+                <p>Tu rol: Niño</p>
+            <% } %>
+            <p>Aquí es donde irán los enlaces a los juegos y el seguimiento de progreso.</p>
+            <a href="/logout" class="button">Cerrar Sesión</a>
+        </section>
+
+        <!-- Sección para mostrar mensajes flash (éxito/error) -->
+        <% if (messages.success && messages.success.length > 0) { %>
+            <ul class="flashes">
+                <li class="success"><%= messages.success[0] %></li>
+            </ul>
+        <% } %>
+        <% if (messages.error && messages.error.length > 0) { %>
+            <ul class="flashes">
+                <li class="error"><%= messages.error[0] %></li>
+            </ul>
+        <% } %>
+
+        <section class="features">
+            <h3>Actividades Recientes</h3>
+            <div class="feature-item">
+                <h4>Juego de Memoria</h4>
+                <p>Última jugada: 20/07/2025 - Puntuación: 85%</p>
+            </div>
+            <div class="feature-item">
+                <h4>Rompecabezas de Formas</h4>
+                <p>Última jugada: 19/07/2025 - Completado: Sí</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Mi Plataforma de Terapia. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

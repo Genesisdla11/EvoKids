@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Plataforma de Terapia</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Iniciar Sesión</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/register">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="login-container">
+        <!-- Sección para mostrar mensajes flash (éxito/error) -->
+        <% if (messages.success && messages.success.length > 0) { %>
+            <ul class="flashes">
+                <li class="success"><%= messages.success[0] %></li>
+            </ul>
+        <% } %>
+        <% if (messages.error && messages.error.length > 0) { %>
+            <ul class="flashes">
+                <li class="error"><%= messages.error[0] %></li>
+            </ul>
+        <% } %>
+
+        <form method="POST" action="/login">
+            <div class="form-group">
+                <label for="username">Nombre de Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="button">Iniciar Sesión</button>
+        </form>
+        <p class="mt-4 text-center">¿No tienes una cuenta? <a href="/register">Regístrate aquí</a></p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Mi Plataforma de Terapia. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
